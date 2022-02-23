@@ -22,30 +22,32 @@ li {list-style: none;}
 #section4 {background-image: url(../img/section4.jpg);}
 
 /*header*/
-header {position: fixed; width: 100%; top:0; left: 0;z-index: 9999; }
-.innerHeader {width: 1300px; background: none; margin: 0 auto; padding: 0 40px; box-sizing:border-box; }
-.logo { width: 1600px; margin: 0 auto;  margin-top: 50px;}
+header { position: relative; width: 100%; max-width: 1200px; z-index: 9999; margin: 0 auto; }
+.logo { position:fixed; display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; margin-top: 25px; }
 .logo img { width: 70px; height: 50px;}
 
+.container { position: relative; top: 0 }
 
 /* triggerBtn */
-.innerHeader .container input[id=trigger] { display: none; }
-.innerHeader .container label[for=trigger] { width: 30px; height: 20px; display: block; position: absolute; cursor: pointer; right: 73px; top: 114px; transform: translateY(-50%); transition: 0.3s;}
-.innerHeader .container label[for=trigger] span { position: absolute; height: 2px; background-color: #FFFFFF; width: 100%; left: 0; transition: 0.3s; }
-.innerHeader .container label[for=trigger] span:nth-child(1) { top: 0; }
-.innerHeader .container label[for=trigger] span:nth-child(2) { top: 50% }
-.innerHeader .container label[for=trigger] span:nth-child(3) { top: 100%; }
+.container input[id=trigger] { display: none; transition: all 300ms}
+.container label[for=trigger] { width: 30px; height: 20px; display: block; cursor: pointer; transform: translateY(-50%); transition: 0.3s;}
+.container label[for=trigger] span { position: absolute; height: 2px; background-color: #FFFFFF; width: 100%; left: 0; transition: 0.3s; }
+.container label[for=trigger] span:nth-child(1) { top: 0; }
+.container label[for=trigger] span:nth-child(2) { top: 50% }
+.container label[for=trigger] span:nth-child(3) { top: 100%; }
 
+.inner-btn { position: relative; margin: 35px 0 0 35px; }
 
 /* sidebar */
-.innerHeader .container .sidebar { background-color: #000000; width: 300px; height: 100vh; right: -300px; position: fixed; opacity: 0.9; z-index: 99999; color: #FFFFFF;}
-.innerHeader .container .sidebar .sidemenu { margin-top: 50px; font-size: 20px; position: relative; text-align: center;}
-.innerHeader .container .sidebar .sidemenu:hover { text-decoration: underline; }
-.innerHeader .container input[id=trigger]:checked + label[for=trigger] span:nth-child(1) { top:50%; transform: rotate(45deg); }
-.innerHeader .container input[id=trigger]:checked + label[for=trigger] span:nth-child(2) { opacity: 0; }
-.innerHeader .container input[id=trigger]:checked + label[for=trigger] span:nth-child(3) { top:50%; transform: rotate(-45deg); }
-.innerHeader .container input[id=trigger]:checked ~ .sidebar { right: 0; transition: 0.3s; }
-.innerHeader .container input[id=trigger]:checked + label[for=trigger] { right: 310px; }
+.container .sidebar { background-color: #000000; width: 410px; height: 100vh; right: -410px; position: fixed; opacity: 0.9; z-index: 99999; color: #FFFFFF; top: 0; }
+.container .sidebar .sidemenu { margin-top: 50px; font-size: 20px; position: relative; text-align: center;}
+.container .sidebar .sidemenu:hover { text-decoration: underline; }
+.container input[id=trigger]:checked + label[for=trigger] { position: relative; z-index: 99999999; }
+.container input[id=trigger]:checked + label[for=trigger] span:nth-child(1) { top:50%; transform: rotate(45deg); }
+.container input[id=trigger]:checked + label[for=trigger] span:nth-child(2) { opacity: 0; }
+.container input[id=trigger]:checked + label[for=trigger] span:nth-child(3) { top:50%; transform: rotate(-45deg); }
+.container input[id=trigger]:checked ~ .sidebar { box-sizing: border-box; padding: 50px 0; right: 0; }
+
 
 
 /* rightNav */
