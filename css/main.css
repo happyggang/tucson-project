@@ -39,7 +39,7 @@ header { position: relative; width: 100%; max-width: 1200px; z-index: 9999; marg
 .inner-btn { position: relative; margin: 35px 0 0 35px; }
 
 /* sidebar */
-.container .sidebar { background-color: #000000; width: 410px; height: 100vh; right: -410px; position: fixed; opacity: 0.9; z-index: 99999; color: #FFFFFF; top: 0; }
+.container .sidebar { background-color: #000000; width: 410px; height: 100vh; right: -410px; position: fixed; opacity: 0.9; z-index: 99999; color: #FFFFFF; top: 0; display: flex; flex-direction: column; justify-content: space-between; align-items: center; }
 .container .sidebar .sidemenu { margin-top: 50px; font-size: 20px; position: relative; text-align: center;}
 .container .sidebar .sidemenu:hover { text-decoration: underline; }
 .container input[id=trigger]:checked + label[for=trigger] { position: relative; z-index: 99999999; }
@@ -47,6 +47,7 @@ header { position: relative; width: 100%; max-width: 1200px; z-index: 9999; marg
 .container input[id=trigger]:checked + label[for=trigger] span:nth-child(2) { opacity: 0; }
 .container input[id=trigger]:checked + label[for=trigger] span:nth-child(3) { top:50%; transform: rotate(-45deg); }
 .container input[id=trigger]:checked ~ .sidebar { box-sizing: border-box; padding: 50px 0; right: 0; }
+
 
 
 
@@ -77,7 +78,7 @@ header { position: relative; width: 100%; max-width: 1200px; z-index: 9999; marg
 #section2 .inner {width: 1200px; position: absolute;  top:40%; left: 40%; transform: translate(-50%,-50%);}
 #section2 .inner .label {width: 140px; padding: 10px 0;  color:#fff; font-size: 17px; background: #000; text-align: center; opacity: 0; transform: translate(30px, 0px); transition: all 1.2s ease;}
 #section2 .inner .label:hover{ color: #000000; background: #FFFFFF; }
-#section2 .inner .tit {float: left;  margin-top: 35px;color:#fff; font-size: 40px; line-height: 1.2; letter-spacing: -1px;opacity: 0; transform: translate(30px, 0px); transition: all 1.2s ease; }
+#section2 .inner .tit {float: left;  margin-top: 35px;color:#fff; font-size: 40px; line-height: 1.4; letter-spacing: -1px;opacity: 0; transform: translate(30px, 0px); transition: all 1.2s ease; }
 #section2 .inner .tit span { font-weight: 700; font-size: 50px;}
 /*section2 motion*/
 #section2.active .inner .label {opacity: 1; transform: translate(0px, 0px); transition: all 1.2s ease-in-out;}
@@ -88,7 +89,7 @@ header { position: relative; width: 100%; max-width: 1200px; z-index: 9999; marg
 #section3 .inner {width: 1200px; position: absolute;  top:40%;left: 40%; transform: translate(-50%,-50%);}
 #section3 .inner .label {width: 140px; padding: 10px 0;  color:#fff; font-size: 17px; background: #000; text-align: center; opacity: 0; transform: translate(30px, 0px); transition: all 1.2s ease;}
 #section3 .inner .label:hover{ color: #000000; background: #FFFFFF; }
-#section3 .inner .tit {float: left;  margin-top: 35px;color:#fff; font-size: 40px; line-height: 1.2; letter-spacing: -1px;opacity: 0; transform: translate(30px, 0px); transition: all 1.2s ease; }
+#section3 .inner .tit {float: left;  margin-top: 35px;color:#fff; font-size: 40px; line-height: 1.4; letter-spacing: -1px;opacity: 0; transform: translate(30px, 0px); transition: all 1.2s ease; }
 #section3 .inner .tit span { font-weight: 700; font-size: 50px;}
 /*section3 motion*/
 #section3.active .inner .label {opacity: 1; transform: translate(0px, 0px); transition: all 1.2s ease-in-out;}
@@ -100,7 +101,7 @@ header { position: relative; width: 100%; max-width: 1200px; z-index: 9999; marg
 #section4 .inner {width: 1200px; position: absolute;  top:40%;left: 40%; transform: translate(-50%,-50%);}
 #section4 .inner .label {width: 140px; padding: 10px 0;  color:#fff; font-size: 17px; background: #000; text-align: center; opacity: 0; transform: translate(30px, 0px); transition: all 1.2s ease;}
 #section4 .inner .label:hover{ color: #000000; background: #FFFFFF; }
-#section4 .inner .tit {float: left;  margin-top: 35px;color:#fff; font-size: 40px; line-height: 1.2; letter-spacing: -1px;opacity: 0; transform: translate(30px, 0px); transition: all 1.2s ease; }
+#section4 .inner .tit {float: left;  margin-top: 35px;color:#fff; font-size: 40px; line-height: 1.4; letter-spacing: -1px;opacity: 0; transform: translate(30px, 0px); transition: all 1.2s ease; }
 #section4 .inner .tit span { font-weight: 700; font-size: 50px;}
 /*section4 motion*/
 #section4.active .inner .label {opacity: 1; transform: translate(0px, 0px); transition: all 1.2s ease-in-out;}
